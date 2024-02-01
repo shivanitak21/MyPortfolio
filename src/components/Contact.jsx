@@ -8,6 +8,7 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
 const Contact = () => {
+  
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -30,7 +31,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-
+  
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -39,8 +40,8 @@ const Contact = () => {
           from_name: form.name,
           to_name: "JavaScript Mastery",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
-          message: form.message,
+          to_email: "st578952@gmail.com",
+          message: form.message, // Only include the user's message
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
@@ -48,7 +49,7 @@ const Contact = () => {
         () => {
           setLoading(false);
           alert("Thank you. I will get back to you as soon as possible.");
-
+  
           setForm({
             name: "",
             email: "",
@@ -58,13 +59,14 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           console.error(error);
-
+  
           alert("Ahh, something went wrong. Please try again.");
         }
       );
   };
-
+  
   return (
+    <>
     <div
       className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
     >
@@ -129,8 +131,22 @@ const Contact = () => {
       >
         <EarthCanvas />
       </motion.div>
+      
     </div>
+    <section style={{  background:"#000",  textAlign: "center"}}>
+    <h1 style={{  padding:"2.5rem 1rem",color:"#fff",fontWeight: "normal",fontSize: "2rem"}}> Made With ❤️ by <span style={{color:"red"}}> Shivani Tak</span></h1>
+
+</section>
+    </>
   );
 };
 
 export default SectionWrapper(Contact, "contact");
+
+
+
+
+
+// .footer .credit span{
+//   color:var(--red);
+// }

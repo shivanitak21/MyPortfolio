@@ -4,6 +4,7 @@ import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
+import demo from "./demo.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -20,6 +21,7 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import bootstrap from "./tech/bootstrap.png";
 
 import meta from "./company/meta.jpg";
 import shopify from "./company/shopify.png";
@@ -27,7 +29,7 @@ import starbucks from "./company/starbucks.png";
 import klm from "./company/klm.jpg";
 import tesla from "./company/tesla.png";
 
-import carrent from "./carrent.png";
+import carrent from "./carrent.jpg";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
@@ -38,6 +40,7 @@ export {
   mobile,
   web,
   github,
+  demo,
   menu,
   close,
   css,
@@ -52,6 +55,7 @@ export {
   redux,
   tailwind,
   typescript,
+  bootstrap,
   threejs,
   meta,
   shopify,

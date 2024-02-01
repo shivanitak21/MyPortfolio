@@ -4,6 +4,7 @@ import {
   creator,
   web,
   javascript,
+  bootstrap,
   typescript,
   html,
   css,
@@ -28,12 +29,24 @@ import {
 
 export const navLinks = [
   {
+    id: "home",
+    title: "Home",
+  },
+  {
     id: "about",
     title: "About",
   },
   {
     id: "work",
     title: "Work",
+  },
+  {
+    id: "skills",
+    title: "Skills",
+  },
+  {
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "contact",
@@ -110,8 +123,12 @@ const technologies = [
     icon: figma,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "React Native",
+    icon: reactjs,
+  },
+  {
+    name: "Bootstrap",
+    icon: bootstrap,
   },
 ];
 
@@ -148,9 +165,7 @@ const experiences = [
     icon: shopify,
     iconBg: "#383E56",
     date: "Completed in 2018 ",
-    points: [
-      "75.4 %",
-    ],
+    points: ["75.4 %"],
   },
   {
     title: "HSC(12th), Science & Maths",
@@ -158,9 +173,7 @@ const experiences = [
     icon: meta,
     iconBg: "#E6DEDD",
     date: "Completed in 2014",
-    points: [
-      "80.2 %",
-    ],
+    points: ["80.2 %"],
   },
   {
     title: "SSC(10th)",
@@ -168,9 +181,7 @@ const experiences = [
     icon: meta,
     iconBg: "#E6DEDD",
     date: "Completed in 2012",
-    points: [
-      "9 CGPA",
-    ],
+    points: ["9 CGPA"],
   },
 ];
 
@@ -203,30 +214,31 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Food Vibes ",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Web-based platform that allows users to search, book, and manage food items from various providers, providing a convenient and efficient food according to needs.",
     tags: [
       {
-        name: "react",
+        name: "Html",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "css",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Javascript",
         color: "pink-text-gradient",
       },
     ],
+    code_link: "https://inspiring-dijkstra-609550.netlify.app/",
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/shivanitak21/Food-Vibes",
   },
   {
-    name: "Job IT",
+    name: "React Single Page",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "web application that works within a web browser and loads just a single document. It does not need page reloading during its usage, and most of its content remains the same while only some of it needs updating",
     tags: [
       {
         name: "react",
@@ -237,34 +249,35 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Javascript",
         color: "pink-text-gradient",
       },
     ],
+    code_link: "https://blissful-einstein-58cdaa.netlify.app",
     image: jobit,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/shivanitak21/AssignmentBQ",
   },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-  },
+  // {
+  //   name: "Trip Guide",
+  //   description:
+  //     "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+  //   tags: [
+  //     {
+  //       name: "nextjs",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "supabase",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "css",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: tripguide,
+  //   source_code_link: "https://github.com/",
+  // },
 ];
 
 export { services, technologies, experiences, testimonials, projects };

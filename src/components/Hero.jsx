@@ -1,9 +1,38 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import shivaniImage from "../assets/shivani.jpg"; // Import your photo
+import { SectionWrapper } from "../hoc";
 
 const Hero = () => {
+  const [text, setText] = useState("");
+
+  useEffect(() => {
+    const phrases = [
+      "",
+      "Frontend Developer",
+      "Web Developer",
+      "Proud Indian."
+    ];
+
+    let currentIndex = 0;
+    let currentText = "";
+
+    const intervalId = setInterval(() => {
+      const phrase = phrases[currentIndex];
+      if (currentText.length < phrase.length) {
+        currentText += phrase[currentText.length];
+        setText(currentText);
+      } else {
+        currentIndex = (currentIndex + 1) % phrases.length;
+        currentText = "";
+      }
+    }, 150); // Adjust the interval for speed
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -19,10 +48,15 @@ const Hero = () => {
             Hi, I'm <span className='text-[#915EFF]'>Shivani Tak</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I am a Web developer <br className='sm:block hidden' />
-            I am a Frontend Developer
+            I am a <span className="text-red-500">Software Developer Engineer (SDE)</span> <br className='sm:block hidden' />
+            I am a <span className="text-green-500">{text}</span>
           </p>
         </div>
+      </div>
+
+      {/* Image remains static */}
+      <div className='absolute top-[120px] right-[50px] rounded-full overflow-hidden border-4 border-white'>
+        <img src={shivaniImage} alt="Shivani Tak" className="w-96 h-96 rounded-full" />
       </div>
 
       {/* <ComputersCanvas /> */}
@@ -48,4 +82,5 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+//export default Hero;
+export default SectionWrapper(Hero, "home");
