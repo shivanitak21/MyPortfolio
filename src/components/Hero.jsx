@@ -4,6 +4,8 @@ import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 import shivaniImage from "../assets/shivani.jpg"; // Import your photo
 import { SectionWrapper } from "../hoc";
+import Resume from './Shivani 2024 Resume.pdf';
+
 
 const Hero = () => {
   const [text, setText] = useState("");
@@ -48,9 +50,26 @@ const Hero = () => {
             Hi, I'm <span className='text-[#915EFF]'>Shivani Tak</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I am a <span className="text-red-500">Software Developer Engineer (SDE)</span> <br className='sm:block hidden' />
+            I am a <span className="text-red-500">Software Developer Engineer</span> <br className='sm:block hidden' />
             I am a <span className="text-green-500">{text}</span>
           </p>
+          <a href={Resume} download>
+          <button style={{  
+            position: "relative",
+  backgroundColor: "#915EFF",
+  marginTop:"150px",
+  border: "none",
+  fontSize: "20px",
+  color: "#FFFFFF",
+  borderRadius: "4px",
+  padding: "10px",
+  width: "200px",
+  textAlign: "center",
+  transitionDuration: "0.4s",
+  textDecoration: "none",
+  overflow: "hidden",
+  cursor: "pointer"}}>Download CV</button>
+        </a>
         </div>
       </div>
 
