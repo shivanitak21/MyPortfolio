@@ -6,7 +6,6 @@ import shivaniImage from "../assets/shivani.jpg"; // Import your photo
 import { SectionWrapper } from "../hoc";
 import Resume from './Shivani 2024 Resume.pdf';
 
-
 const Hero = () => {
   const [text, setText] = useState("");
 
@@ -37,44 +36,44 @@ const Hero = () => {
 
   return (
     <section className={`relative w-full h-screen mx-auto`}>
-      <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
-      >
-        <div className='flex flex-col justify-center items-center mt-5'>
-          <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
-          <div className='w-1 sm:h-80 h-40 violet-gradient' />
-        </div>
+      {/* Image div for smaller screens */}
+      <div className="absolute top-[120px] right-[50px] rounded-full overflow-hidden border-4 border-white hidden sm:block">
+        <img src={shivaniImage} alt="Shivani Tak" className="w-96 h-96 rounded-full" />
+      </div>
 
-        <div>
+      {/* Text and button content */}
+      <div className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 flex-wrap-reverse sm:flex-nowrap`}>
+        <div className='flex flex-col'>
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className='text-[#915EFF]'>Shivani Tak</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I am a <span className="text-red-500">Software Developer Engineer</span> <br className='sm:block hidden' />
+            I am a <span className="text-red-500">Software Developer Engineer </span>
+             <br className='sm:block hidden' />  
             I am a <span className="text-green-500">{text}</span>
           </p>
           <a href={Resume} download>
-          <button style={{  
-            position: "relative",
-  backgroundColor: "#915EFF",
-  marginTop:"150px",
-  border: "none",
-  fontSize: "20px",
-  color: "#FFFFFF",
-  borderRadius: "4px",
-  padding: "10px",
-  width: "200px",
-  textAlign: "center",
-  transitionDuration: "0.4s",
-  textDecoration: "none",
-  overflow: "hidden",
-  cursor: "pointer"}}>Download CV</button>
-        </a>
+            <button style={{  
+              position: "relative",
+              backgroundColor: "#915EFF",
+              marginTop:"150px",
+              border: "none",
+              fontSize: "20px",
+              color: "#FFFFFF",
+              borderRadius: "4px",
+              padding: "10px",
+              width: "200px",
+              textAlign: "center",
+              transitionDuration: "0.4s",
+              textDecoration: "none",
+              overflow: "hidden",
+              cursor: "pointer"}}>Download CV</button>
+          </a>
         </div>
       </div>
 
-      {/* Image remains static */}
-      <div className='absolute top-[120px] right-[50px] rounded-full overflow-hidden border-4 border-white'>
+      {/* Image div for larger screens */}
+      <div className='absolute top-[120px] right-[50px] rounded-full overflow-hidden border-4 border-white sm:hidden'>
         <img src={shivaniImage} alt="Shivani Tak" className="w-96 h-96 rounded-full" />
       </div>
 
